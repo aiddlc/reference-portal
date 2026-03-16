@@ -19,19 +19,19 @@ It implements the AIDDLC Standard v1.0 in full, covering:
 - All four Product Track phases with community development area guidance
 - Artifact template library (Intelligence Brief, Compliance Matrix, ADR, and all other required artifacts)
 - Context Package assembly and export
-- Compliance mapping by regulation (GDPR, MHRA, CQC, GPhC, FCA, HIPAA, ISO 27001, EU AI Act)
+- Compliance mapping across data protection, medical device, clinical quality, financial services, healthcare privacy, and information security frameworks
 - Self-assessment checklist linked to certification criteria
 
 ---
 
 ## Production use
 
-The Reference Portal runs in production at **Club Health OS** — a regulated physiotherapy clinical management system operating under CQC registration and subject to GPhC oversight for its pharmacy-adjacent functions.
+The Reference Portal runs in production at **Club Health OS** — a regulated healthcare SaaS platform subject to clinical quality, pharmaceutical, and data protection oversight.
 
 This is not a demo environment. Production use means:
 - The portal is used by the engineering team on live development cycles
 - Gate criteria and artifact requirements are validated against real regulatory scrutiny
-- Compliance mapping has been reviewed against actual CQC inspection requirements
+- Compliance mapping has been reviewed against actual inspection requirements
 - Issues found in production are fixed in the portal, not papered over
 
 When you use the Reference Portal, you are using tooling that has been exercised in a regulated production context.
