@@ -1,62 +1,121 @@
 # AIDDLC Reference Portal
 
-The official reference implementation of the AIDDLC Standard.
+[![Standard](https://img.shields.io/badge/Standard-v1.0-0D6E6E?style=flat-square)](https://github.com/aiddlc/standard)
+[![Licence](https://img.shields.io/badge/Licence-BSL%201.1-333333?style=flat-square)](LICENCE)
+[![Production](https://img.shields.io/badge/Production-Club%20Health%20OS-0D6E6E?style=flat-square)](https://github.com/aiddlc/reference-portal)
 
-**Status: In Development**
-The portal is currently being built. This repository will contain the
-complete source once it reaches public beta.
+The official interactive implementation of the AIDDLC Standard. Provides a navigable, searchable interface to the complete specification, phase-by-phase guidance, artifact templates, and checklist tools.
+
+Hosted at **[aiddlc.ai/portal](https://aiddlc.ai/portal)** — maintained and operated by 10QBIT Technologies.
 
 ---
 
-## What the portal will be
+## What it is
 
-A working, self-hostable web application that guides teams through
-the complete AIDDLC lifecycle:
+The Reference Portal is not documentation. It is an interactive tool that teams use actively during development — loading the relevant phase, working through gate criteria, generating artifact templates, and tracking conformance status.
 
-- **Phase navigator** — step-by-step guidance through all 7 Engineering
-  Track phases and 4 Product Track phases
-- **Artifact templates** — pre-built templates for every required artifact
-  (Intelligence Brief, Compliance Matrix, ADRs, Decision Log, etc.)
-- **Gate checklists** — interactive gate review checklists with sign-off
-  tracking per role
-- **Context Layer** — persistent, append-only project knowledge base
-  that accumulates across all phases
-- **AI Supervisor interface** — context loading, session management,
-  and drift detection tooling
-- **Compliance Evidence Package** — one-click export of all artifacts
-  formatted for regulatory submission
-- **Decision Log** — auto-generated audit trail of all material decisions
+It implements the AIDDLC Standard v1.0 in full, covering:
+- All seven Engineering Track phases with interactive gate checklists
+- All four Product Track phases with community development area guidance
+- Artifact template library (Intelligence Brief, Compliance Matrix, ADR, and all other required artifacts)
+- Context Package assembly and export
+- Compliance mapping across data protection, medical device, clinical quality, financial services, healthcare privacy, and information security frameworks
+- Self-assessment checklist linked to certification criteria
 
-## Reference implementation
+---
 
-The portal is being built and validated on
-[Club Health OS](https://10qbit.ai) — a regulated healthcare SaaS
-platform operating across 21+ clinics in the UK. Everything in the
-portal has been tested in a live regulated-industry environment.
+## Production use
+
+The Reference Portal runs in production at **Club Health OS** — a regulated healthcare SaaS platform subject to clinical quality, pharmaceutical, and data protection oversight.
+
+This is not a demo environment. Production use means:
+- The portal is used by the engineering team on live development cycles
+- Gate criteria and artifact requirements are validated against real regulatory scrutiny
+- Compliance mapping has been reviewed against actual inspection requirements
+- Issues found in production are fixed in the portal, not papered over
+
+When you use the Reference Portal, you are using tooling that has been exercised in a regulated production context.
+
+---
 
 ## Hosted version
 
-A managed hosted version will be available at `aiddlc.ai/portal`
-once the portal reaches public beta.
-
-To be notified when the portal is available:
-→ [standard@aiddlc.ai](mailto:standard@aiddlc.ai)
-→ Watch this repository
-
-## Self-hosting
-
-Self-hosting documentation will be published alongside the first
-public release. The portal will be deployable on any Node.js host,
-including DigitalOcean, Railway, Render, and Vercel.
-
-## Licence
-
-Business Source Licence 1.1 (BSL 1.1).
-Converts to Apache 2.0 on 1 January 2030.
-
-The hosted version at `aiddlc.ai/portal` is operated by
-10QBIT Technologies.
+The hosted portal at [aiddlc.ai/portal](https://aiddlc.ai/portal) is always current with the latest published version of the AIDDLC Standard. It requires no installation, no account, and no cost for individual use.
 
 ---
 
-Maintained by [10QBIT Technologies](https://10qbit.ai) · [aiddlc.ai](https://aiddlc.ai)
+## Self-hosting
+
+### Prerequisites
+
+- Node.js 18 or later
+- npm 9 or later
+- A static file server or hosting platform (Vercel, Netlify, Cloudflare Pages, Nginx)
+
+### Installation
+
+```bash
+git clone https://github.com/aiddlc/reference-portal.git
+cd reference-portal
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+The portal will be available at `http://localhost:3000`.
+
+### Production build
+
+```bash
+npm run build
+```
+
+Output is in `/dist`. Serve as a static site — no server-side runtime is required.
+
+### Environment variables
+
+| Variable | Required | Description |
+|---|---|---|
+| `AIDDLC_VERSION` | No | Standard version to display (defaults to latest) |
+| `AIDDLC_ORG_NAME` | No | Your organisation name for portal personalisation |
+| `AIDDLC_BASE_URL` | No | Base URL for self-hosted deployment |
+
+---
+
+## Licence
+
+The Reference Portal is licensed under the **Business Source Licence 1.1 (BSL 1.1)**.
+
+**What this means in practice**:
+
+- **Non-production use**: Free. Use it for evaluation, learning, development, and testing without restriction.
+- **Production use**: Requires a licence from 10QBIT Technologies. Contact [licensing@aiddlc.ai](mailto:licensing@aiddlc.ai).
+- **Automatic open source**: On **1 January 2030**, the licence automatically converts to the Apache License 2.0. From that date, production use is free for everyone.
+
+**Why BSL 1.1?**
+
+The AIDDLC Standard itself (the specification) is CC BY 4.0 — fully open. The Reference Portal is the commercial implementation that funds the ongoing development and maintenance of the standard. BSL 1.1 allows the open-source community to inspect, learn from, and contribute to the portal code while protecting the investment that makes the standard sustainable.
+
+See [LICENCE](LICENCE) for the full licence text.
+
+---
+
+## Contributing
+
+Contributions to the portal are welcome for:
+- Bug fixes
+- Accessibility improvements
+- Additional artifact templates (open an issue first to align with the standard)
+- Compliance mapping corrections
+
+Design changes and new features require an issue discussion before a PR. The portal must accurately implement the standard — changes that diverge from the specification will not be accepted.
+
+See [github.com/aiddlc/.github/CONTRIBUTING.md](https://github.com/aiddlc/.github/blob/main/CONTRIBUTING.md) for the contribution process.
+
+---
+
+*Reference Portal · AIDDLC Standard v1.0 · 10QBIT Technologies · [aiddlc.ai](https://aiddlc.ai)*
